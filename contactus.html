@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Sign up </title>
+    <script src="validate.js"></script>
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        height: 140vh;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: linear-gradient(135deg, aqua, #262729);
+    }
+
+    .con {
+        max-width: 700px;
+        width: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+    }
+
+    .con .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .con .title::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        background: linear-gradient(135deg, aqua, #262729);
+    }
+
+    .con form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+
+    }
+
+    form .credit .box {
+
+
+        display: inline-block;
+        width: 130px;
+    }
+
+    form .credit .box input {
+
+        height: 30px;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 30px;
+        font-size: 16px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+
+
+    }
+
+
+    .credit .box input:focus,
+    .credit .box input:valid {
+        border-color: #262729;
+
+    }
+
+    .user-details .input-box .details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 30px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #262729;
+
+    }
+
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form .gender-details .category {
+
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 14px 0;
+    }
+
+    form .lang-details .lang-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form .lang-details .box {
+
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 14px 0;
+    }
+
+
+
+    form .DateB-details {
+        display: block;
+        margin-right: 100px;
+        margin-top: 6px;
+        font-weight: 500;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    form .city-details {
+        display: block;
+        margin-right: 190px;
+        margin-top: 30px;
+        font-weight: 500;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+    }
+
+    form .numt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 23px 0 12px 0;
+        display: inline-block;
+        margin-left: 50px;
+    }
+
+
+    form .credit {
+
+        margin-top: 0 px;
+
+    }
+
+    form .button {
+        height: 45px;
+        margin: 45px 0;
+
+    }
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, aqua, #262729);
+    }
+
+    form .button input:hover {
+        background: linear-gradient(135deg, aqua, #262729);
+    }
+
+    @media (max-width: 584px) {
+        .con {
+            max-width: 100%;
+
+        }
+
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="con">
+        <div class="title">SIGN UP</div>
+        <form action="conn.php" method="post" name="form">
+
+            <div class="user-details">
+                <!------------First name---------->
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" name="first" id="first" placeholder="Enter your First Name" pattern="[A-Za-z]{1,32}" required>
+                </div>
+                <!------------Last name---------->
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" name="last" id="last" placeholder="Enter your Last Name" pattern="[A-Za-z]{1,32}"
+                        required>
+                </div>
+                <!------------Email-------------->
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email" 
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                </div>
+                <!------------Phone number-------------->
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" name="phone" id="phone" placeholder="05x xxx xxxx" pattern="05+[0-9]{8}"
+                        required>
+                </div>
+
+                <!-----------credit card number--------->
+                <div class="input-box">
+                    <span class="details">Credit Card Number</span>
+                    <input type="text" name="cnum" id="cnum" placeholder="xxxx xxxx xxxx xxxx" pattern="4+[0-9]{15}"
+                        required>
+                </div>
+                <!------------------------city drop down menu------------>
+
+                <div class="city-details">
+                    <span class="city-title">City</span>
+                    <select id="city" name="city">
+                        <option name="Jeddah" value="Jeddah">Jeddah</option>
+                        <option name="Makkah" value="Makkah">Makkah</option>
+                        <option name="Riyadh" value="Riyadh">Riyadh</option>
+                    </select>
+                </div>
+                <!-----------credit information --------->
+                <div class="credit">
+                    <div class="box">
+                        <span class="details">Expiration</span>
+                        <input type="text" name="ex" id="ex" placeholder="(mm/yyyy)" pattern="\d{1,2}/\d{4}" required>
+                    </div>
+                    <div class="box">
+                        <span class="details">Code </span>
+                        <input type="text" name="code" id="code" placeholder="***" pattern="[0-9]{3}" required>
+                    </div>
+                </div>
+                <!------------------------Date of birth------------------------>
+                <div class="DateB-details">
+                    <label for="start">Date of Birth</label>
+
+                    <input type="date" name="start" id="start" value="2022-03-22" min="1900-01-01" max="2022-12-31">
+
+                </div>
+            </div>
+            <!----------gender--------------------------->
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+
+                <div class="category">
+                    <!----------gender (Male)--------------------------->
+                    <input type="radio" name="gender" id="gender" value="male" checked>
+                    <label for="male">Male</label>
+                    <!----------gender (Female)--------------------------->
+                    <input type="radio" name="gender" id="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <!------------------------check box language-------------------->
+            <div class="lang-details">
+                <span class="lang-title">Language</span>
+
+                <div class="box">
+                    <input type="checkbox" id="Arabic" name="lan" id="lan" value="Arabic" checked>
+                    <label for="Arabic"> Arabic</label><br>
+                    <input type="checkbox" id="English" name="lan" id="lan" value="English">
+                    <label for="English">English</label><br>
+                    <input type="checkbox" id="Italy" name="lan" id="lan" value="Italy">
+                    <label for="Italy"> Italy</label>
+                </div>
+
+                <!--------------------------calaulartion----------------------->
+
+
+                <div class="calculation">
+                    <lable>Tickect Type</lable>
+                    <select id="type" name="type">
+                        <option name="max" value="MAX">MAX</option>
+                        <option name="golden" value="GOLDEN">GOLDEN</option>
+                        <option name="normal" value="NORMAL">NORMAL</option>
+                    </select>
+                    <div class="numt">
+                        Tickect number <input name="numt" id="numt" type="number" max="20" min="1" ng-model="price">
+                    </div>
+                </div>
+
+                <!----------------------------Submit button--------------------->
+                <div class="button">
+
+                    <input type="submit" value="submit" name="submit" onsubmit=" return validate() , validateFormPhone() 
+                    , ValidateEmail(),validate_cvv() ,expiration(),cardNumber(),validatenames()">
+                    <br>
+                    <a href="index.html">Home</a>
+                </div>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>
